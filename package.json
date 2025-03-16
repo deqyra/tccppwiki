@@ -1,0 +1,27 @@
+{
+    "name": "tccpp.wiki",
+    "scripts": {
+        "dev": "vitepress dev src",
+        "build": "vitepress build src",
+        "preview": "vitepress preview src",
+        "lint": "eslint src",
+        "lint-files": "eslint --color",
+        "format": "prettier . --write",
+        "format-check": "prettier . --check",
+        "format-files": "prettier . --write --ignore-unknown"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.10",
+        "@typescript-eslint/eslint-plugin": "^8.26.1",
+        "@typescript-eslint/parser": "^8.26.1",
+        "eslint": "^9.22.0",
+        "eslint-config-prettier": "^10.1.1",
+        "eslint-plugin-prettier": "^5.2.3",
+        "prettier": "^3.5.3",
+        "vitepress": "^1.6.3"
+    },
+    "dependencies": {
+        "markdown-it-footnote": "^4.0.0",
+        "markdown-it-mathjax3": "^4.3.2"
+    }
+}
