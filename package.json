@@ -18,9 +18,14 @@
         "eslint-config-prettier": "^10.1.1",
         "eslint-plugin-prettier": "^5.2.3",
         "prettier": "^3.5.3",
+        "sass": "^1.85.1",
         "vitepress": "^1.6.3"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.7.2",
+        "@fortawesome/free-brands-svg-icons": "^6.7.2",
+        "@fortawesome/free-solid-svg-icons": "^6.7.2",
+        "@fortawesome/vue-fontawesome": "^3.0.8",
         "markdown-it-footnote": "^4.0.0",
         "markdown-it-mathjax3": "^4.3.2"
     }

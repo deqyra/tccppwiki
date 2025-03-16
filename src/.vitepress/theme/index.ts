@@ -4,6 +4,13 @@ import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import "./style.css";
 
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faFaucet, faChevronLeft, faChevronRight, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
+
+library.add(faFaucet, faChevronLeft, faChevronRight, faGithub, faArrowUpRightFromSquare, faDiscord);
+
 export default {
     extends: DefaultTheme,
     Layout: () => {
@@ -12,6 +19,6 @@ export default {
         });
     },
     enhanceApp({ app, router, siteData }) {
-        // ...
+        app.component("font-awesome-icon", FontAwesomeIcon);
     },
 } satisfies Theme;
