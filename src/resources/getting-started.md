@@ -23,6 +23,16 @@ To get started on Windows, select one of the following guides to set up a develo
 
 In order to ensure your development environment is set up correctly, copy the provided code and try to run the code.
 
+For C
+```c
+#include <stdio.h>
+
+int main() {
+    puts("Hello, World!");
+}
+```
+
+For C++
 ```cpp
 #include <iostream>
 
