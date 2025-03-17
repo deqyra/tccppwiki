@@ -1,6 +1,7 @@
 # tccpp.wiki
 
-Website for the Together C & C++ community.
+Repository for the very much work-in-progress website for the Together C & C++ community focusing on tutorials,
+resources, and wiki-like content.
 
 # Contributing
 
@@ -20,3 +21,19 @@ https://vitepress.dev/guide/markdown. Additionally, we use the following markdow
 - [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
 
 The site source is in [src/](src/).
+
+## Guidelines
+
+Some guidelines for contribution:
+
+- Try to explain things succinctly
+- Mind your audience: If you're contributing beginner-oriented content, try to keep things as simple as possible,
+  linking to more advanced topics if needed.
+- Try to maintain consistent style. Some very rough points to touch on:
+  - Indent with 4 spaces
+  - Braces on the same line
+  - Pointers/references on the left
+- Run the site locally and test how your contributions look. Make sure everything renders correctly, update formatting
+  if needed.
+
+As this site evolves these guidelines will too.
