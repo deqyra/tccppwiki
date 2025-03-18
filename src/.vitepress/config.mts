@@ -6,6 +6,7 @@ export default defineConfig({
     title: "Together C & C++",
     description: "The Together C & C++ Community",
     outDir: "../dist",
+    head: [["link", { rel: "icon", href: "/favicon.ico" }]],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         logo: "/assets/tccpp.png",
