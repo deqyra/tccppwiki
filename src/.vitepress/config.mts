@@ -8,6 +8,7 @@ export default defineConfig({
     outDir: "../dist",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
+        logo: "/assets/tccpp.png",
         nav: [
             { text: "Home", link: "/" },
             { text: "Resources", link: "/resources" },

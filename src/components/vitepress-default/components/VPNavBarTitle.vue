@@ -31,7 +31,7 @@ const target = computed(() => (typeof theme.value.logoLink === "string" ? undefi
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .title {
     display: flex;
     align-items: center;
@@ -56,6 +56,7 @@ const target = computed(() => (typeof theme.value.logoLink === "string" ? undefi
 
 :deep(.logo) {
     margin-right: 8px;
-    height: var(--vp-nav-logo-height);
+    height: 40px; // var(--vp-nav-logo-height);
+    border-radius: 30%;
 }
 </style>
