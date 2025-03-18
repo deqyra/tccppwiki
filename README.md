@@ -54,6 +54,10 @@ Some guidelines for contribution:
   - Indent with four spaces
   - Braces on the same line, e.g. `int main() {`
   - Pointers/references on the left, e.g. `void* ptr`
+  - Naming:
+    - `lower_snake` for most things
+    - `Capitalized` for template args
+    - `SCREAM_CASE` for macros
 - Run the site locally and test how your contributions look. Make sure everything renders correctly, update formatting
   if needed.
 - Columns should be no wider than 120 characters.
