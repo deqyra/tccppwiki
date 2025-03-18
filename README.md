@@ -3,6 +3,8 @@
 Repository for the very much work-in-progress website for the Together C & C++ community focusing on tutorials,
 resources, and wiki-like content.
 
+Code is under the MIT license, site content is CC BY-SA.
+
 # Contributing
 
 Contributions are welcome!
