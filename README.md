@@ -24,8 +24,24 @@ https://vitepress.dev/guide/markdown. Additionally, we use the following markdow
 
 The site source is in [src/](src/).
 
-A note on formatting: We use prettier for formatting files. Prettier does not understand some markdown syntax, such as
-note / tip / warning blocks. This can be worked around with extra newlines or `<!-- prettier-ignore -->`.
+A note on formatting: We use prettier for formatting files. Prettier does not understand some custom markdown syntax,
+such as custom alert blocks. This can be worked around with newlines, e.g.:
+
+```markdown
+> [!NOTE]
+>
+> Content
+```
+
+or
+
+```markdown
+::: note
+
+Content
+
+:::
+```
 
 ## Guidelines
 
