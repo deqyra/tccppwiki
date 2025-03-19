@@ -11,6 +11,8 @@ import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 library.add(faFaucet, faChevronLeft, faChevronRight, faGithub, faArrowUpRightFromSquare, faDiscord);
 
+import InlineIcons from './../components/InlineIcons.ts'
+
 export default {
     extends: DefaultTheme,
     Layout: () => {
@@ -20,5 +22,11 @@ export default {
     },
     enhanceApp({ app, router, siteData }) {
         app.component("font-awesome-icon", FontAwesomeIcon);
+        let iconName: keyof typeof InlineIcons;
+        for (iconName in InlineIcons) {
+            const icon = InlineIcons[iconName];
+            app.component(iconName, icon);
+        }
     },
 } satisfies Theme;
+ 
