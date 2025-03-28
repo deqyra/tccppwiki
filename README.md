@@ -50,6 +50,10 @@ Some guidelines for contribution:
 - Try to explain things succinctly
 - Mind your audience: If you're contributing beginner-oriented content, try to keep things as simple as possible,
   linking to more advanced topics if needed.
+- Columns should be no wider than 120 characters.
+- We use an auto-formatter for markdown files which automatically wraps paragraphs at the column width. We don't do
+  things like "semantic line breaks," and if you try to write such the autoformatter will clobber it. Code must be
+  formatted manually.
 - Try to maintain consistent style. Some very rough points to touch on:
   - Indent with four spaces
   - Braces on the same line, e.g. `int main() {`
@@ -60,6 +64,5 @@ Some guidelines for contribution:
     - `SCREAM_CASE` for macros
 - Run the site locally and test how your contributions look. Make sure everything renders correctly, update formatting
   if needed.
-- Columns should be no wider than 120 characters.
 
 As this site evolves these guidelines will too.
