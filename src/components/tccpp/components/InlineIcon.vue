@@ -5,10 +5,15 @@ const props = defineProps<{
 }>();
 </script>
 
-<style module>
+<style module lang="scss">
 .inline_icon {
-    width: 14pt;
-    display: inline;
+    // aligning like font-awesome does
+    display: inline-block;
+    box-sizing: content-box;
+    overflow: visible;
+    height: 1em;
+    vertical-align: -0.125em;
+    transform: scale(1.2);
 }
 </style>
 
