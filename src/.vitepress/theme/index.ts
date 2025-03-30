@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faFaucet, faChevronLeft, faChevronRight, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
+import InlineIcon from "../../components/tccpp/components/InlineIcon.vue";
 
 library.add(faFaucet, faChevronLeft, faChevronRight, faGithub, faArrowUpRightFromSquare, faDiscord);
 
@@ -20,5 +21,6 @@ export default {
     },
     enhanceApp({ app, router, siteData }) {
         app.component("font-awesome-icon", FontAwesomeIcon);
+        app.component("InlineIcon", InlineIcon);
     },
 } satisfies Theme;
