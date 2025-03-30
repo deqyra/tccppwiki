@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import VPHomeHero from "./VPHomeHero.vue";
-import VPHomeFeatures from "./VPHomeFeatures.vue";
+// import VPHomeFeatures from "./VPHomeFeatures.vue";
 import VPHomeContent from "./VPHomeContent.vue";
 import { useData } from "../composables/data";
 
@@ -25,7 +25,7 @@ const { frontmatter, theme } = useData();
         <slot name="home-hero-after" />
 
         <slot name="home-features-before" />
-        <VPHomeFeatures />
+        <!-- <VPHomeFeatures /> -->
         <slot name="home-features-after" />
 
         <VPHomeContent v-if="frontmatter.markdownStyles !== false">
