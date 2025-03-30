@@ -127,7 +127,10 @@ const pageName = computed(() => route.path.replace(/[./]+/g, "_").replace(/_html
 .aside-container {
     position: fixed;
     top: 0;
-    padding-top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + var(--vp-doc-top-height, 0px) + 48px);
+    padding-top: calc(
+        var(--vp-nav-height) + var(--vp-nav-margin) + var(--vp-layout-top-height, 0px) + var(--vp-doc-top-height, 0px) +
+            48px
+    );
     width: 224px;
     height: 100vh;
     overflow-x: hidden;
@@ -152,7 +155,7 @@ const pageName = computed(() => route.path.replace(/[./]+/g, "_").replace(/_html
 .aside-content {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - (var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px));
+    min-height: calc(100vh - (var(--vp-nav-height) + var(--vp-nav-margin) + var(--vp-layout-top-height, 0px) + 48px));
     padding-bottom: 32px;
 }
 
