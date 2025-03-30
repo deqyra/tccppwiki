@@ -24,10 +24,6 @@ const { frontmatter, theme } = useData();
         </VPHomeHero>
         <slot name="home-hero-after" />
 
-        <slot name="home-features-before" />
-        <!-- <VPHomeFeatures /> -->
-        <slot name="home-features-after" />
-
         <VPHomeContent v-if="frontmatter.markdownStyles !== false">
             <Content />
         </VPHomeContent>
