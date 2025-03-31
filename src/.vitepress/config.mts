@@ -21,12 +21,12 @@ export default defineConfig({
                 items: [
                     { text: "Getting Started", link: "/resources/getting-started" },
                     {
-                        text: "C",
+                        text: "C Introduction",
                         items: [{}],
                         collapsed: true,
                     },
                     {
-                        text: "C++",
+                        text: "C++ Introduction",
                         items: [
                             { text: "What is C++", link: "/resources/cpp/what-is-cpp" },
                             {
