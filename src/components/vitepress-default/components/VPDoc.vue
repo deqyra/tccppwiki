@@ -38,6 +38,10 @@ const pageName = computed(() => route.path.replace(/[./]+/g, "_").replace(/_html
                 <div class="content-container">
                     <slot name="doc-before" />
                     <main class="main">
+                        <div class="construction">
+                            <h1>Under Construction</h1>
+                            <p>This site is a work in progress, contributions are welcome!</p>
+                        </div>
                         <Content
                             class="vp-doc"
                             :class="[pageName, theme.externalLinkIcon && 'external-link-icon-enabled']"
@@ -54,7 +58,20 @@ const pageName = computed(() => route.path.replace(/[./]+/g, "_").replace(/_html
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.construction {
+    box-shadow: 0 0 0 5px rgb(235, 229, 58);
+    outline: dashed 5px black;
+    margin-bottom: 40px;
+    padding: 15px;
+    h1 {
+        font-size: 20px;
+        margin: 0 0 5px;
+    }
+    p {
+    }
+}
+
 .VPDoc {
     padding: 32px 24px 96px;
     width: 100%;
