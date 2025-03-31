@@ -207,7 +207,10 @@ export default defineConfig({
                     },
                     {
                         text: "General Resources",
-                        items: [{ text: "Standards", link: "/resources/general/standards" }],
+                        items: [
+                            { text: "Standards", link: "/resources/general/standards" },
+                            { text: "Compiler Development", link: "/resources/general/compiler-development" },
+                        ],
                         collapsed: true,
                     },
                 ],
