@@ -205,6 +205,11 @@ export default defineConfig({
                         ],
                         collapsed: true,
                     },
+                    {
+                        text: "General Resources",
+                        items: [{ text: "Standards", link: "/resources/general/standards" }],
+                        collapsed: true,
+                    },
                 ],
             },
         ],
