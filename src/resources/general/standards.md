@@ -23,6 +23,7 @@
 | :c: **C89** | [[HTML]](http://port70.net/~nsz/c/c89/c89-draft.html) | N/A                                                                       |
 
 [^1]: This is the most recent working draft with editorial changes from a recent committee meeting
+
 [^2]: WG14 doesn't have public working drafts so we only have out-of-date links for C23
 
 ## Additional Material
@@ -30,7 +31,6 @@
 :c: **_C99 Rationale_ [[PDF]](https://www.open-std.org/jtc1/sc22/wg14/www/C99RationaleV5.10.pdf)**
 
 :c: **_C89 Rationale_ [[HTML]](http://port70.net/~nsz/c/c89/rationale/title.html)**
-
 
 ## Tips For Using The C++ HTML Standards
 
