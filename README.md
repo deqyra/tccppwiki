@@ -83,7 +83,8 @@ You can assume C++20 as a minimum without explicitly pointing it out. For exampl
 
 Also, try to maintain consistent style in code. Some very rough points to touch on:
 
-- Code blocks should be no wider than 80 columns (the surrounding Markdown can be wider, and is auto-formatted)
+- Most markdown and code on the website has a 120 column limit and this is enforced by the auto-formatter
+- Code blocks in markdown should generally not be wider than 80 columns so that they fits without scrolling
 - Indent with four spaces
 - Braces on the same line, e.g. `int main() {`
 - Pointers/references on the left, e.g. `void* ptr`
