@@ -218,12 +218,12 @@ export default defineConfig({
                             ],
                             collapsed: true,
                         },
+                        { text: "Standards", link: "/resources/general/standards" },
+                        { text: "Project Ideas", link: "/resources/general/project-ideas" },
                         {
-                            text: "General Resources",
+                            text: "Advanced Resources",
                             items: [
-                                { text: "Standards", link: "/resources/general/standards" },
                                 { text: "Compiler Development", link: "/resources/general/compiler-development" },
-                                { text: "Project Ideas", link: "/resources/general/project-ideas" },
                             ],
                             collapsed: true,
                         },
