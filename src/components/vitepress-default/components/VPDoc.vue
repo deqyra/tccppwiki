@@ -6,7 +6,7 @@ import { useSidebar } from "../composables/sidebar";
 import VPDocAside from "./VPDocAside.vue";
 import VPDocFooter from "./VPDocFooter.vue";
 
-const { theme } = useData();
+const { theme, frontmatter } = useData();
 
 const route = useRoute();
 const { hasSidebar, hasAside, leftAside } = useSidebar();
@@ -38,7 +38,7 @@ const pageName = computed(() => route.path.replace(/[./]+/g, "_").replace(/_html
                 <div class="content-container">
                     <slot name="doc-before" />
                     <main class="main">
-                        <div class="construction">
+                        <div v-if="frontmatter.wip === true" class="construction">
                             <h1>Under Construction</h1>
                             <p>This site is a work in progress, contributions are welcome!</p>
                         </div>

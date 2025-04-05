@@ -1,3 +1,7 @@
+---
+wip: true
+---
+
 # Error Detection and Handling
 
 ## What is Error Handling?
