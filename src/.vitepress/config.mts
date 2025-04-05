@@ -39,13 +39,17 @@ export default defineConfig({
                                     },
                                     { text: "Comments", link: "/resources/cpp/language-basics#comments" },
                                     {
-                                        text: "Definition vs Declaration",
-                                        link: "/resources/cpp/language-basics#definition-vs-declaration",
+                                        text: "Statements",
+                                        link: "/resources/cpp/language-basics#statements",
+                                    },
+                                    {
+                                        text: "Identifiers",
+                                        link: "/resources/cpp/language-basics#identifiers",
                                     },
                                     { text: "Keywords", link: "/resources/cpp/language-basics#keywords" },
                                     {
                                         text: "Initialization vs Assignment",
-                                        link: "/resources/cpp/language-basics#initialization-vs-assignment",
+                                        link: "/resources/cpp/language-basics#initialization-versus-assignment",
                                     },
                                     {
                                         text: "Fundamental Data Types and Literals",
@@ -84,7 +88,7 @@ export default defineConfig({
                                     },
                                     {
                                         text: "Logical Operators",
-                                        link: "/resources/cpp/operators#assignment-operators",
+                                        link: "/resources/cpp/operators#logical-operators",
                                     },
                                     { text: "Bitwise Operators", link: "/resources/cpp/operators#bitwise-operators" },
                                     { text: "Other Operators", link: "/resources/cpp/operators#other-operators" },
@@ -118,8 +122,8 @@ export default defineConfig({
                                         link: "/resources/cpp/functions#what-is-a-function",
                                     },
                                     {
-                                        text: "Structure of Function",
-                                        link: "/resources/cpp/functions#structure-of-function",
+                                        text: "Structure of Functions",
+                                        link: "/resources/cpp/functions#structure-of-functions",
                                     },
                                     {
                                         text: "Parameters, Arguments, and Return Values",
@@ -187,6 +191,7 @@ export default defineConfig({
                                     { text: "Strings", link: "/resources/cpp/containers#strings" },
                                     { text: "Unordered Maps", link: "/resources/cpp/containers#unordered-maps" },
                                 ],
+                                collapsed: true,
                             },
                         ],
                         collapsed: true,
