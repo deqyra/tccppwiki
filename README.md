@@ -21,7 +21,11 @@ If you do not have make, run `npm i` then `npm run dev`.
 
 The site uses VitePress, which allows for content to easily be written in markdown and custom stuff to be done in Vue.
 All normal markdown is supported and VitePress comes with a handful of useful extensions (github note/warning/etc
-blocks, line highlighting for code, emojis, math equations, and more).
+blocks, line highlighting for code, emojis, math equations, and more). Additionally, we add a few plugins:
+
+- Footnotes
+- Custom icons
+- Keyboard key formatting
 
 These are good overviews of what vitepress lets you do for markdown pages:
 
@@ -30,9 +34,7 @@ These are good overviews of what vitepress lets you do for markdown pages:
 - https://vitepress.dev/guide/frontmatter
 - https://vitepress.dev/guide/using-vue
 
-Additionally, we use the following markdown extensions:
-
-- [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
+An overview of custom markdown formatting for the site can be found at https://tccpp.wiki/resources/wiki-dev/markdown.
 
 The site source is in [src/](src/).
 
