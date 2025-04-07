@@ -138,28 +138,68 @@ Custom containers can be defined by their types, titles, and contents.
 **Input**
 
 ```md
-::: info This is an info box. :::
+::: info
 
-::: tip This is a tip. :::
+This is an info box.
 
-::: warning This is a warning. :::
+:::
 
-::: danger This is a dangerous warning. :::
+::: tip
 
-::: details This is a details block. :::
+This is a tip.
+
+:::
+
+::: warning
+
+This is a warning.
+
+:::
+
+::: danger
+
+This is a dangerous warning.
+
+:::
+
+::: details
+
+This is a details block.
+
+:::
 ```
 
 **Output**
 
-::: info This is an info box. :::
+::: info
 
-::: tip This is a tip. :::
+This is an info box.
 
-::: warning This is a warning. :::
+:::
 
-::: danger This is a dangerous warning. :::
+::: tip
 
-::: details This is a details block. :::
+This is a tip.
+
+:::
+
+::: warning
+
+This is a warning.
+
+:::
+
+::: danger
+
+This is a dangerous warning.
+
+:::
+
+::: details
+
+This is a details block.
+
+:::
 
 ### Custom Title
 
@@ -168,7 +208,11 @@ You may set custom title by appending the text right after the "type" of the con
 **Input**
 
 ````md
-::: danger STOP Danger zone, do not proceed :::
+::: danger STOP
+
+Danger zone, do not proceed
+
+:::
 
 ::: details Click me to toggle the code
 
@@ -181,7 +225,11 @@ console.log("Hello, VitePress!");
 
 **Output**
 
-::: danger STOP Danger zone, do not proceed :::
+::: danger STOP
+
+Danger zone, do not proceed
+
+:::
 
 ::: details Click me to toggle the code
 
@@ -248,7 +296,11 @@ useful when you're documenting component libraries. You might also wanna check o
 **Syntax**
 
 ```md
-::: raw Wraps in a `<div class="vp-raw">` :::
+::: raw
+
+Wraps in a `<div class="vp-raw">`
+
+:::
 ```
 
 `vp-raw` class can be directly used on elements too. Style isolation is currently opt-in:
@@ -285,26 +337,46 @@ VitePress also supports
 to render as callouts. They will be rendered the same as the [custom containers](#custom-containers).
 
 ```md
-> [!NOTE] Highlights information that users should take into account, even when skimming.
+> [!NOTE]
+>
+> Highlights information that users should take into account, even when skimming.
 
-> [!TIP] Optional information to help a user be more successful.
+> [!TIP]
+>
+> Optional information to help a user be more successful.
 
-> [!IMPORTANT] Crucial information necessary for users to succeed.
+> [!IMPORTANT]
+>
+> Crucial information necessary for users to succeed.
 
-> [!WARNING] Critical content demanding immediate user attention due to potential risks.
+> [!WARNING]
+>
+> Critical content demanding immediate user attention due to potential risks.
 
-> [!CAUTION] Negative potential consequences of an action.
+> [!CAUTION]
+>
+> Negative potential consequences of an action.
 ```
 
-> [!NOTE] Highlights information that users should take into account, even when skimming.
+> [!NOTE]
+>
+> Highlights information that users should take into account, even when skimming.
 
-> [!TIP] Optional information to help a user be more successful.
+> [!TIP]
+>
+> Optional information to help a user be more successful.
 
-> [!IMPORTANT] Crucial information necessary for users to succeed.
+> [!IMPORTANT]
+>
+> Crucial information necessary for users to succeed.
 
-> [!WARNING] Critical content demanding immediate user attention due to potential risks.
+> [!WARNING]
+>
+> Critical content demanding immediate user attention due to potential risks.
 
-> [!CAUTION] Negative potential consequences of an action.
+> [!CAUTION]
+>
+> Negative potential consequences of an action.
 
 ## Syntax Highlighting in Code Blocks
 
@@ -635,7 +707,9 @@ It also supports [line highlighting](#line-highlighting-in-code-blocks):
 
 <<< snippets/snippet.js{2}
 
-::: tip The value of `@` corresponds to the source root. By default it's the VitePress project root, unless `srcDir` is
+::: tip
+
+The value of `@` corresponds to the source root. By default it's the VitePress project root, unless `srcDir` is
 configured. Alternatively, you can also import from relative paths:
 
 ```md
@@ -769,8 +843,12 @@ You can also [import snippets](#import-code-snippets) in code groups:
 
 You can include a markdown file in another markdown file, even nested.
 
-::: tip You can also prefix the markdown path with `@`, it will act as the source root. By default, it's the VitePress
-project root, unless `srcDir` is configured. :::
+::: tip
+
+You can also prefix the markdown path with `@`, it will act as the source root. By default, it's the VitePress project
+root, unless `srcDir` is configured.
+
+:::
 
 For example, you can include a relative markdown file using this:
 
@@ -882,8 +960,12 @@ corresponding part of the code file. You can provide a custom region name after 
 ## Usage Line 3
 ```
 
-::: warning Note that this does not throw errors if your file is not present. Hence, when using this feature make sure
-that the contents are being rendered as expected. :::
+::: warning
+
+Note that this does not throw errors if your file is not present. Hence, when using this feature make sure that the
+contents are being rendered as expected.
+
+:::
 
 Instead of VS Code regions, you can also use header anchors to include a specific section of the file. For example, if
 you have a header in your markdown file like this:
