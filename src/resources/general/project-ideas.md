@@ -5,7 +5,9 @@ provide inspiration. If an idea here catches your interest, we recommend trying 
 have the freedom to explore, problem solve, and be creative with what you make. There's no one right or wrong way to do
 anything in computer science, try things and have fun!
 
-Each of these can vary in difficulty and you have a lot of freedom over how mu
+Each of these can vary in difficulty and you have a lot of freedom over how much you try to do and how challenging you
+want to make it for yourself. You also have complete freedom over design and what exactly you want to build. This page
+is meant to be a source of inspiration rather than a list of projects to make.
 
 ## Videogames and Graphics
 
