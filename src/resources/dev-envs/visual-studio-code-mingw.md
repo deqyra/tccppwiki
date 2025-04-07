@@ -78,8 +78,8 @@ The following commands should all be run in the MSYS2 CLANG64 terminal. First, r
 
 ::: warning Pasting commands in the MSYS2 terminal
 
-<kbd>Ctrl</kbd>+<kbd>V</kbd> doesn't work in the MSYS2 terminal. Instead, use <kbd>Shift</kbd>+<kbd>Insert</Kbd>, or
-right-click anywhere and select "Paste".
+[k:Ctrl+V:] doesn't work in the MSYS2 terminal. Instead, use [k:Shift+Insert:], or right-click anywhere and select
+"Paste".
 
 :::
 
@@ -89,7 +89,7 @@ When you run the command above, you will eventually be asked to confirm the oper
 :: Proceed with installation? [Y/n]
 ```
 
-Press <kbd>Enter</kbd> to continue.
+Press [k:Enter:] to continue.
 
 It is possible that you get this message sometimes:
 
@@ -97,8 +97,8 @@ It is possible that you get this message sometimes:
 :: To complete this update all MSYS2 processes including this terminal will be closed. Confirm to proceed [Y/n]
 ```
 
-Press <kbd>Enter</kbd> and the terminal will close. **If this happens, restart the MSYS2 terminal and run `pacman -Syu`
-again to finish the update.**
+Press [k:Enter:] and the terminal will close. **If this happens, restart the MSYS2 terminal and run `pacman -Syu` again
+to finish the update.**
 
 ::: tip What is `pacman`?
 
@@ -114,7 +114,7 @@ every once in a while to keep your tools up-to-date.
 
 4. **Install the Clang toolchain**
 
-Run `pacman -S mingw-w64-clang-x86_64-clang` to install the entire Clang toolchain. Press <kbd>Enter</kbd> when asked to
+Run `pacman -S mingw-w64-clang-x86_64-clang` to install the entire Clang toolchain. Press [k:Enter:] when asked to
 confirm. You'll notice that a fair amount of stuff is getting installed. This is `pacman` working its magic to install
 not just Clang and its associated tools but also every other package required for them to properly function.
 
@@ -237,16 +237,16 @@ projects, plural!) which live within the workspace is completely unconstrained b
 
 Let's create a workspace then. On the welcome page in VS Code, select the "Open folder" option. If you closed the
 welcome page, you can bring it back by selecting `Help`→`Welcome` in the top bar. Alternatively, you can tell VS Code to
-open a folder with the key chord <kbd>Ctrl</kbd>+<kbd>K</kbd>, <kbd>Ctrl</kbd>+<kbd>O</kbd>.
+open a folder with the key chord [k:Ctrl+K:], [k:Ctrl+O:].
 
 ::: tip Pressing key chords
 
-Sometimes, usual key shortcuts like <kbd>Ctrl</kbd>+<kbd>S</kbd> or <kbd>Ctrl</kbd>+<kbd>Z</kbd> are not enough, and
-specific actions call for slightly more complex shortcuts. That's what key chords are.
+Sometimes, usual key shortcuts like [k:Ctrl+S:] or [k:Ctrl+Z:] are not enough, and specific actions call for slightly
+more complex shortcuts. That's what key chords are.
 
-When you see something like <kbd>Ctrl</kbd>+<kbd>K</kbd>, <kbd>Ctrl</kbd>+<kbd>O</kbd>, you need to press
-<kbd>Ctrl</kbd>+<kbd>K</kbd> first, and then press <kbd>Ctrl</kbd>+<kbd>O</kbd>. You can keep the <kbd>Ctrl</kbd> key
-pressed for the entire duration of the chord and simply press <kbd>K</kbd> and then <kbd>O</kbd> in quick succession.
+When you see something like [k:Ctrl+K:], [k:Ctrl+O:], you need to press [k:Ctrl+K:] first, and then press [k:Ctrl+O:].
+You can keep the [k:Ctrl:] key pressed for the entire duration of the chord and simply press [k:K:] and then [k:O:] in
+quick succession.
 
 VS Code is full of those. Some of them are more useful than others, but all of them can be customized to your liking.
 
@@ -286,8 +286,8 @@ code. As a consequence, VS Code will apply C++ syntax highlighting to any code w
 
 :::
 
-Once you're happy with your new file's name, press <kbd>Enter</kbd>. VS Code creates the file and immediately opens it
-in the editor for you.
+Once you're happy with your new file's name, press [k:Enter:]. VS Code creates the file and immediately opens it in the
+editor for you.
 
 ::: warning
 
@@ -308,8 +308,7 @@ int main() {
 ```
 
 This code, when ran, will print "Hello!" in the terminal. The specifics of it are not so important for now, the goal is
-simply to test that your setup works. Save your file by pressing <kbd>Ctrl</kbd>+<kbd>S</kbd> while the editor is
-focused.
+simply to test that your setup works. Save your file by pressing [k:Ctrl+S:] while the editor is focused.
 
 ::: warning Saving files
 
@@ -322,8 +321,8 @@ VS Code shows the status of the file next to its name in the editor tab at the t
 ![Display differences between saved and unsaved files in VS Code](/assets/vs-code-setup/vscode-unsaved-file.png)
 
 A white dot in place of the cross button indicates that the file has _unsaved modifications_. Such modifications are not
-present on disk and cannot be compiled until you save the file, which you can do by pressing
-<kbd>Ctrl</kbd>+<kbd>S</kbd> while having the file open and focused in the editor.
+present on disk and cannot be compiled until you save the file, which you can do by pressing [k:Ctrl+S:] while having
+the file open and focused in the editor.
 
 :::
 
@@ -352,10 +351,10 @@ Let's break down that command a little bit:
   can be anything, the only requirement is that it has the `.exe` extension so that Windows recognizes it as an
   executable file.
 
-Tweak the command so that it matches your situation, and press <kbd>Enter</kbd> to run it. A successful compilation will
-print nothing. If there's an error in the compiled code, it will be printed in the terminal. If you have errors, check
-that the content of your C++ file matches the code from above and **make sure that you save the file** before trying to
-run the command again.
+Tweak the command so that it matches your situation, and press [k:Enter:] to run it. A successful compilation will print
+nothing. If there's an error in the compiled code, it will be printed in the terminal. If you have errors, check that
+the content of your C++ file matches the code from above and **make sure that you save the file** before trying to run
+the command again.
 
 After the compilation is successful, you should see a file named `my_first_program.exe` appear in VS Code's file
 exporer. This is indeed your first C++ program. You did it! You can try to run it from the terminal by typing
@@ -469,7 +468,7 @@ hotkeys which will run the compile command for you. To that effect, we will be u
 A task in VS Code is a prepared shell command that you can run by pressing a hotkey or a button in the UI. To create a
 task:
 
-- Open the command palette by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>.
+- Open the command palette by pressing [k:Ctrl+Shift+P:].
 - Start typing `Tasks: Configure Task`, and select the corresponding option once it comes up.
 - Select `Create tasks.json from template`.
 - Finally, select `Other`.
@@ -479,9 +478,8 @@ in the editor.
 
 ::: tip The VS Code command palette
 
-VS Code exposes _all of its functionality_ through the command palette, which can be opened with
-<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>. It's a very useful shortcut to know about, and we'll be using it a bunch
-in the next steps.
+VS Code exposes _all of its functionality_ through the command palette, which can be opened with [k:Ctrl+Shift+P:]. It's
+a very useful shortcut to know about, and we'll be using it a bunch in the next steps.
 
 :::
 
@@ -497,17 +495,17 @@ This object is a task, and its own fields define the properties of the task. Her
 (field `"type"`) labeled "echo" (field `"label"`) and that the command ran by this task is `echo Hello` (field
 `"command"`).
 
-You can try to run it right away, by opening the command palette (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) and
-selecting `Tasks: Run task` (start typing and select it when it shows up). Then, choose `echo` in the dropdown. At this
-point, you'll be presented with one more dropdown, asking you to
-`Select for which kind of errors and warnings to scan the task output`. In the options below, select
-`Never scan the task output for this task`. You'll notice that a new field gets added to our task object in the
-`tasks.json` file: `"problemMatcher": []`. This field is used to tell VS Code how to parse errors in the output of the
-task in order to put red squiggles under the appropriate places in your code. It's a bit of a pain to configure
-properly, and we don't need it anyway, since Clangd already handles red squiggles for us. `"problemMatcher": []`
-basically corresponds to "no problem matcher", so we're clear on that end. Finally, you should have noticed that `Hello`
-was printed in your terminal. This means the task worked! Run it once again, and notice that VS Code no longer pesters
-you about scanning the output for problems -- because the task is now configured to do nothing about that.
+You can try to run it right away, by opening the command palette ([k:Ctrl+Shift+P:]) and selecting `Tasks: Run task`
+(start typing and select it when it shows up). Then, choose `echo` in the dropdown. At this point, you'll be presented
+with one more dropdown, asking you to `Select for which kind of errors and warnings to scan the task output`. In the
+options below, select `Never scan the task output for this task`. You'll notice that a new field gets added to our task
+object in the `tasks.json` file: `"problemMatcher": []`. This field is used to tell VS Code how to parse errors in the
+output of the task in order to put red squiggles under the appropriate places in your code. It's a bit of a pain to
+configure properly, and we don't need it anyway, since Clangd already handles red squiggles for us.
+`"problemMatcher": []` basically corresponds to "no problem matcher", so we're clear on that end. Finally, you should
+have noticed that `Hello` was printed in your terminal. This means the task worked! Run it once again, and notice that
+VS Code no longer pesters you about scanning the output for problems -- because the task is now configured to do nothing
+about that.
 
 Printing `Hello` in the terminal seems a bit silly, but we're going to tweak this task so that it compiles our code for
 us. No more typing in the terminal! You can go ahead and perform the following replacements in the task object:
@@ -566,16 +564,16 @@ Now, when you run the `Run` task, the `Compile` task will be ran first, and only
 This is all getting rather convenient and usable, but it can get better. We can define one task to be the default build
 task, which gives it a dedicated keyboard shortcut. Open the command palette again, and select
 `Tasks: Configure Default Build Task`. In the dropdown, select the `Compile` task. Now, you get to compile your code
-with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>. If you take a look at the `tasks.json` file, you'll notice that VS
-Code has updated the `Compile` task to reflect that it is now the default build task, by adding a field
+with [k:Ctrl+Shift+B:]. If you take a look at the `tasks.json` file, you'll notice that VS Code has updated the
+`Compile` task to reflect that it is now the default build task, by adding a field
 `"group": {"kind": "build", "isDefault": true}`.
 
 ::: tip What about the `Run` task?
 
-You might be wondering why we didn't bind the `Run` task to <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>, since it
-would run the `Compile` task too. To keep it short, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> is the shortcut
-associated with building your code, which is a different thing from running the built executable. Not to worry however,
-we're getting a shortcut for running your build right in the next section, with an added bonus.
+You might be wondering why we didn't bind the `Run` task to [k:Ctrl+Shift+B:], since it would run the `Compile` task
+too. To keep it short, [k:Ctrl+Shift+B:] is the shortcut associated with building your code, which is a different thing
+from running the built executable. Not to worry however, we're getting a shortcut for running your build right in the
+next section, with an added bonus.
 
 :::
 
@@ -680,27 +678,28 @@ Then, click on line 5, on the left of the line numbers. A red dot should appear:
 This is called a _breakpoint_. When your program runs in a debug session, it will be paused when the execution reaches
 this line. Actually, let's just try it. Follow these instructions:
 
-- Press <kbd>F5</kbd> to start debugging. Pretty much immediately, the line with the breakpoint should become
-  highlighted in yellow and a bunch of stuff should have showed up in the `Run and Debug` pane on the left.
+- Press [k:F5:] to start debugging. Pretty much immediately, the line with the breakpoint should become highlighted in
+  yellow and a bunch of stuff should have showed up in the `Run and Debug` pane on the left.
   ![Local variables in VS Code during a debug session](/assets/vs-code-setup/vscode-locals-during-debug.png)
 
-- Press F10 to execute the highlighted line of code. Now line 6 should be highlighted in yellow, and the value of `x` in
-  the left pane should have changed to `2`.
-- Press F10 one more time to execute line 6, advancing execution by one line again. Line 7 should now be highlighted,
-  and `y` in the left pane should have taken `3` as value.
-- Press F10 one last time, executing line 7. You should now see that `z` in the left pane has a new value: `5`, which
-  turns out to be the result of `x + y` (whose values were 2 and 3 respectively when the addition was carried out).
+- Press [k:F10:] to execute the highlighted line of code. Now line 6 should be highlighted in yellow, and the value of
+  `x` in the left pane should have changed to `2`.
+- Press [k:F10:] one more time to execute line 6, advancing execution by one line again. Line 7 should now be
+  highlighted, and `y` in the left pane should have taken `3` as value.
+- Press [k:F10:] one last time, executing line 7. You should now see that `z` in the left pane has a new value: `5`,
+  which turns out to be the result of `x + y` (whose values were 2 and 3 respectively when the addition was carried
+  out).
 - Finally, press `F5` to resume execution until the next breakpoint. Since there are no more breakpoints, our program
   just finishes running.
 
 ::: tip F5?
 
-While _not_ in a debug session, <kbd>F5</kbd> is the shortcut to run the current debug configuration. You can see the
+While _not_ in a debug session, [k:F5:] is the shortcut to run the current debug configuration. You can see the
 currently selected debug configuration at the top of the `Run and Debug` pane of VS Code:
 ![The selected debug configuration VS Code](/assets/vs-code-setup/vscode-selected-debug-config.png)
 
-_During_ a debug session, <kbd>F5</kbd> is the shortcut to resume execution until the next breakpoint is encountered (at
-which point the program pauses again).
+_During_ a debug session, [k:F5:] is the shortcut to resume execution until the next breakpoint is encountered (at which
+point the program pauses again).
 
 :::
 
