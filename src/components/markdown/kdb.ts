@@ -3,35 +3,14 @@ import MarkdownIt from "markdown-it";
 import { Token } from "markdown-it/index.js";
 import StateCore from "markdown-it/lib/rules_core/state_core.mjs";
 
-// based on markdown-it-emoji
-
-const ICONS = {
-    cpp: "c++.svg",
-    c: "c.svg",
-    vs: "vs.webp",
-    vscode: "vs-code.webp",
-};
-
-const ICON_PATH = "assets/icons";
-
-function regex_escape(str: string) {
-    return str.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&");
-}
-
-export const icon_re = new RegExp(
-    Object.keys(ICONS)
-        .map(name => `:${name}:`)
-        .map(regex_escape)
-        .join("|"),
-);
-export const icon_re_global = new RegExp(icon_re.source, "g");
+export const kdb_re = /\[k:([^\]]+)\]/;
+export const kdb_re_global = new RegExp(kdb_re.source, "g");
 
 function split_text_token(text: string, level: number, Token: StateCore["Token"]) {
     let last_pos = 0;
     const nodes: Token[] = [];
 
-    for (const { 0: match, index } of text.matchAll(icon_re_global)) {
-        let icon_name = match.slice(1, -1);
+    for (const { 0: match, 1: content, index } of text.matchAll(kdb_re_global)) {
         // Add new tokens to pending list
         if (index > last_pos) {
             const token = new Token("text", "", 0);
@@ -39,12 +18,9 @@ function split_text_token(text: string, level: number, Token: StateCore["Token"]
             nodes.push(token);
         }
 
-        const token = new Token("wiki_icon", "", 0);
-        token.markup = icon_name;
-        token.meta = {
-            path: `/${ICON_PATH}/${ICONS[icon_name]}`,
-            alt: icon_name,
-        };
+        const token = new Token("kbd", "", 0);
+        token.markup = match;
+        token.content = content;
         nodes.push(token);
 
         last_pos = index + match.length;
@@ -59,11 +35,12 @@ function split_text_token(text: string, level: number, Token: StateCore["Token"]
     return nodes;
 }
 
-export function wiki_icons_plugin(md: MarkdownIt) {
-    md.renderer.rules.wiki_icon = function (tokens, idx /*, options, env */) {
-        return `<InlineIcon src="${tokens[idx].meta.path}" alt="${tokens[idx].meta.alt}" />`;
+export function kbd_plugin(md: MarkdownIt) {
+    md.renderer.rules.kbd = function (tokens, idx /*, options, env */) {
+        // return `<InlineIcon src="${tokens[idx].meta.path}" alt="${tokens[idx].meta.alt}" />`;
+        return `<kbd>${tokens[idx].content}</kbd>`;
     };
-    md.core.ruler.after("linkify", "wiki_icon", function (state) {
+    md.core.ruler.after("linkify", "kbd", function (state) {
         const blockTokens = state.tokens;
         let auto_link_level = 0;
         for (let j = 0, l = blockTokens.length; j < l; j++) {
@@ -78,7 +55,7 @@ export function wiki_icons_plugin(md: MarkdownIt) {
                 if ((token.type === "link_open" || token.type === "link_close") && token.info === "auto") {
                     auto_link_level += token.nesting;
                 }
-                if (token.type === "text" && auto_link_level === 0 && icon_re.test(token.content)) {
+                if (token.type === "text" && auto_link_level === 0 && kdb_re.test(token.content)) {
                     // replace current node
                     blockTokens[j].children = tokens = md.utils.arrayReplaceAt(
                         tokens,
