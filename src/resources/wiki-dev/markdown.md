@@ -49,9 +49,12 @@ And providing you are in `foo/one.md`:
 
 ```md
 [Home](/) <!-- sends the user to the root index.md --> [foo](/foo/)
+
 <!-- sends the user to index.html of directory foo --> [foo heading](./#heading)
 <!-- anchors user to a heading in the foo index file --> [bar - three](../bar/three) <!-- you can omit extension -->
+
 [bar - three](../bar/three.md) <!-- you can append .md --> [bar - four](../bar/four.html)
+
 <!-- or you can append .html -->
 ```
 
@@ -79,7 +82,7 @@ lang: en-US
 
 This data will be available to the rest of the page, along with all custom and theming components.
 
-For more details, see [Frontmatter](../reference/frontmatter-config).
+For more details, see [Frontmatter](https://vitepress.dev/reference/frontmatter-config).
 
 ## GitHub-Style Tables
 
@@ -423,7 +426,7 @@ export default {
 A [list of valid languages](https://shiki.style/languages) is available on Shiki's repository.
 
 You may also customize syntax highlight theme in app config. Please see
-[`markdown` options](../reference/site-config#markdown) for more details.
+[`markdown` options](https://vitepress.dev/reference/site-config#markdown) for more details.
 
 ## Line Highlighting in Code Blocks
 
@@ -630,7 +633,7 @@ export default {
 };
 ```
 
-Please see [`markdown` options](../reference/site-config#markdown) for more details.
+Please see [`markdown` options](https://vitepress.dev/reference/site-config#markdown) for more details.
 
 You can add `:line-numbers` / `:no-line-numbers` mark in your fenced code blocks to override the value set in config.
 
@@ -1076,39 +1079,6 @@ export default {
   },
 };
 ```
-
-## Advanced Configuration
-
-VitePress uses [markdown-it](https://github.com/markdown-it/markdown-it) as the Markdown renderer. A lot of the
-extensions above are implemented via custom plugins. You can further customize the `markdown-it` instance using the
-`markdown` option in `.vitepress/config.js`:
-
-```js
-import { defineConfig } from "vitepress";
-import markdownItAnchor from "markdown-it-anchor";
-import markdownItFoo from "markdown-it-foo";
-
-export default defineConfig({
-  markdown: {
-    // options for markdown-it-anchor
-    // https://github.com/valeriangalliat/markdown-it-anchor#usage
-    anchor: {
-      permalink: markdownItAnchor.permalink.headerLink(),
-    },
-
-    // options for @mdit-vue/plugin-toc
-    // https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-toc#options
-    toc: { level: [1, 2] },
-
-    config: md => {
-      // use more markdown-it plugins!
-      md.use(markdownItFoo);
-    },
-  },
-});
-```
-
-See full list of configurable properties in [Config Reference: App Config](../reference/site-config#markdown).
 
 ## Footnotes
 
