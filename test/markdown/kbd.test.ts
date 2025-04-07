@@ -1,13 +1,13 @@
 import { describe, expect, test } from "vitest";
 import MarkdownIt from "markdown-it";
 import { reduce } from "./utils";
-import { kbd_plugin } from "../../src/components/markdown/kdb";
+import { kbd_plugin } from "../../src/components/markdown/kbd";
 
 describe("nobr tests", () => {
     test("basic", () => {
         const md = MarkdownIt();
         md.use(kbd_plugin);
-        const result = md.parse("[k:Enter]", {});
+        const result = md.parse("[k:Enter:]", {});
         expect(reduce(result)).to.deep.equal([
             {
                 children: null,
@@ -22,7 +22,40 @@ describe("nobr tests", () => {
                         type: "kbd",
                     },
                 ],
-                content: "[k:Enter]",
+                content: "[k:Enter:]",
+                type: "inline",
+            },
+            {
+                children: null,
+                content: "",
+                type: "paragraph_close",
+            },
+        ]);
+    });
+    test("sequential", () => {
+        const md = MarkdownIt();
+        md.use(kbd_plugin);
+        const result = md.parse("[k:Enter:][k:]:]", {});
+        expect(reduce(result)).to.deep.equal([
+            {
+                children: null,
+                content: "",
+                type: "paragraph_open",
+            },
+            {
+                children: [
+                    {
+                        children: null,
+                        content: "Enter",
+                        type: "kbd",
+                    },
+                    {
+                        children: null,
+                        content: "]",
+                        type: "kbd",
+                    },
+                ],
+                content: "[k:Enter:][k:]:]",
                 type: "inline",
             },
             {
@@ -35,7 +68,7 @@ describe("nobr tests", () => {
     test("paragraph", () => {
         const md = MarkdownIt();
         md.use(kbd_plugin);
-        const result = md.parse("foo [k:Enter] bar", {});
+        const result = md.parse("foo [k:Enter:] bar", {});
         expect(reduce(result)).to.deep.equal([
             {
                 children: null,
@@ -60,7 +93,7 @@ describe("nobr tests", () => {
                         type: "text",
                     },
                 ],
-                content: "foo [k:Enter] bar",
+                content: "foo [k:Enter:] bar",
                 type: "inline",
             },
             {
@@ -107,7 +140,7 @@ describe("nobr tests", () => {
                 type: "paragraph_close",
             },
         ]);
-        const result2 = md.parse("[foo][k:Enter]\n[k:Enter]: https://google.com", {});
+        const result2 = md.parse("[foo][k:Enter:]\n[k:Enter:]: https://google.com", {});
         expect(reduce(result2)).to.deep.equal([
             {
                 children: null,
@@ -142,7 +175,7 @@ describe("nobr tests", () => {
                         type: "text",
                     },
                 ],
-                content: "[foo][k:Enter]\n[k:Enter]: https://google.com",
+                content: "[foo][k:Enter:]\n[k:Enter:]: https://google.com",
                 type: "inline",
             },
             {
@@ -151,7 +184,7 @@ describe("nobr tests", () => {
                 type: "paragraph_close",
             },
         ]);
-        const result3 = md.parse("[k:Enter](https://google.com)", {});
+        const result3 = md.parse("[k:Enter:](https://google.com)", {});
         expect(reduce(result3)).to.deep.equal([
             {
                 children: null,
@@ -167,7 +200,7 @@ describe("nobr tests", () => {
                     },
                     {
                         children: null,
-                        content: "k:Enter",
+                        content: "k:Enter:",
                         type: "text",
                     },
                     {
@@ -176,7 +209,7 @@ describe("nobr tests", () => {
                         type: "link_close",
                     },
                 ],
-                content: "[k:Enter](https://google.com)",
+                content: "[k:Enter:](https://google.com)",
                 type: "inline",
             },
             {

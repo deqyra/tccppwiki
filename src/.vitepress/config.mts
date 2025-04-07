@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import footnote from "markdown-it-footnote";
 import { wiki_icons_plugin } from "../components/markdown/wiki-icons";
-import { kbd_plugin } from "../components/markdown/kdb";
+import { kbd_plugin } from "../components/markdown/kbd";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({

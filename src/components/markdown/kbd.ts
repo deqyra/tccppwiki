@@ -3,7 +3,7 @@ import MarkdownIt from "markdown-it";
 import { Token } from "markdown-it/index.js";
 import StateCore from "markdown-it/lib/rules_core/state_core.mjs";
 
-export const kdb_re = /\[k:([^\]]+)\]/;
+export const kdb_re = /\[k:(.+?):\]/;
 export const kdb_re_global = new RegExp(kdb_re.source, "g");
 
 function split_text_token(text: string, level: number, Token: StateCore["Token"]) {
@@ -37,8 +37,10 @@ function split_text_token(text: string, level: number, Token: StateCore["Token"]
 
 export function kbd_plugin(md: MarkdownIt) {
     md.renderer.rules.kbd = function (tokens, idx /*, options, env */) {
-        // return `<InlineIcon src="${tokens[idx].meta.path}" alt="${tokens[idx].meta.alt}" />`;
-        return `<kbd>${tokens[idx].content}</kbd>`;
+        return tokens[idx].content
+            .split("+")
+            .map(part => `<kbd>${part.trim()}</kbd>`)
+            .join(" + ");
     };
     md.core.ruler.after("linkify", "kbd", function (state) {
         const blockTokens = state.tokens;
