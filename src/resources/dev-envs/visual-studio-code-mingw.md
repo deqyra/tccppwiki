@@ -57,21 +57,20 @@ Clang-related tools installed with it.
 Leave the default install location unchanged. If for some reason you _must_ change it, make sure it contains only
 unaccentuated Latin characters and no spaces. In short, use only letters from A to Z with no accent (so no `à` `é` `ï`
 `ô` and the likes), and use hyphens `-` or underscores `_` rather than spaces. The rest of this page assumes that you
-installed MSYS2 in the default location, `C:\msys64`.  
-If you run into any strange issues during installation (or at any later point), try disabling your antivirus software or
-adding the MSYS2 install location as an exception in its settings.
+installed MSYS2 in the default location, `C:\msys64`.<br/>If you run into any strange issues during installation (or at
+any later point), try disabling your antivirus software or adding the MSYS2 install location as an exception in its
+settings.
 
 Uncheck the `Run MSYS2 now` option at the end of installation, or close the window that the installer opens.
 
 2. **Start MSYS2**
 
-The Windows Start menu will have several different shortcuts. Select the one which reads `MSYS2 CLANG64`.  
+The Windows Start menu will have several different shortcuts. Select the one which reads `MSYS2 CLANG64`.<br/>
 ![MSYS2 environments in the Windows Start menu](/assets/vs-code-setup/msys2-env-shortcuts.png)
 
 The window that opens is called a "terminal" or a "console". You can type commands in there to interact with the MSYS2
-environment.  
-**Make sure** the prompt reads `CLANG64` in purple text. If it says something else, you used the wrong shortcut. Close
-that terminal and start the correct one instead.
+environment.<br/>**Make sure** the prompt reads `CLANG64` in purple text. If it says something else, you used the wrong
+shortcut. Close that terminal and start the correct one instead.
 
 3. **Update MSYS2**
 
@@ -179,7 +178,7 @@ which shell you're using, because as you noticed the difference can matter: you 
 in PowerShell **_by default_**.
 
 When you ran `clang++ --version` in the MSYS2 terminal, it ended up running a program named `clang++.exe` located at
-`C:\msys64\clang64\bin`:  
+`C:\msys64\clang64\bin`:<br/>
 ![An Explorer window showing where Clang++ is located](/assets/vs-code-setup/clang-exe-location.png)
 
 The reason why the MSYS2 shell knew to look there for `clang++.exe` is because of a setting called `PATH`.
@@ -189,8 +188,7 @@ The reason why the MSYS2 shell knew to look there for `clang++.exe` is because o
 `PATH` is a list of directories that will be searched by a shell when it needs to run a program. To see the contents of
 `PATH`, run `echo $env:PATH` in VS Code's PowerShell and `echo $PATH` in the MSYS2 terminal. The commands are different
 because the shells that you run them in are different, and expect things to be in a slightly different format. You
-should see this:  
-![PATH printed in both MSYS2 Bash and PowerShell](/assets/vs-code-setup/default-shell-paths.png)
+should see this:<br/>![PATH printed in both MSYS2 Bash and PowerShell](/assets/vs-code-setup/default-shell-paths.png)
 
 Yours might not exactly match those on the screenshot, but the point is that we get two different lists of directories.
 
@@ -263,7 +261,7 @@ At this point, VS Code might be asking you whether you trust the authors of the 
 only a concern when you're working on projects that you fetched online from untrustworthy sources. Click the button
 which reads "Yes, I trust the authors".
 
-Your window should now look like the following:  
+Your window should now look like the following:<br/>
 ![Empty workspace in VS Code](/assets/vs-code-setup/vscode-empty-workspace.png)
 
 Not much has changed, except for the left sidebar. It's labeled _Explorer_, and its job is to show the files and
@@ -271,8 +269,7 @@ directories that your workspace contains. At the moment there are none, that's w
 name of the workspace directory (`CPP_DEMO` in the screenshot above). Let's fix that right now by adding some files.
 
 If you hover on the sidebar, which we will now refer to as the _file explorer_, you'll see a bunch of icons showing up
-in the top-right corner:  
-![File explorer icons in VS Code](/assets/vs-code-setup/vscode-file-explorer-icons.png)
+in the top-right corner:<br/>![File explorer icons in VS Code](/assets/vs-code-setup/vscode-file-explorer-icons.png)
 
 Click on the leftmost icon to create a new file in the workspace. VS Code will add an entry in the file explorer and
 will wait for you to give it a name. It can be anything, as long as it does not contain spaces, nor accented or
@@ -321,7 +318,7 @@ when you save the file.** If you forget to save your file and then compile it, y
 version of your file, and the results will not be consistent with your expectations. This is a common source of
 confusion among beginner programmers.
 
-VS Code shows the status of the file next to its name in the editor tab at the top.  
+VS Code shows the status of the file next to its name in the editor tab at the top.<br/>
 ![Display differences between saved and unsaved files in VS Code](/assets/vs-code-setup/vscode-unsaved-file.png)
 
 A white dot in place of the cross button indicates that the file has _unsaved modifications_. Such modifications are not
@@ -331,7 +328,7 @@ present on disk and cannot be compiled until you save the file, which you can do
 :::
 
 The next step is to actually compile your file. Open the terminal again by selecting `View`→`Terminal` in the top bar.
-You'll see that something is slightly different from the last time:  
+You'll see that something is slightly different from the last time:<br/>
 ![VS Code terminal open in a workspace](/assets/vs-code-setup/vscode-terminal-open-in-workspace.png)
 
 VS Code has opened the terminal in our workspace directory, as you can tell from the path printed as part of the prompt.
@@ -425,12 +422,11 @@ With that out of the way, we can move on.
 
 ## Code completion
 
-Code completion is a feature most IDEs have which provides suggestions as you type your code.  
+Code completion is a feature most IDEs have which provides suggestions as you type your code.<br/>
 ![VS Code autocomplete suggestions](/assets/vs-code-setup/vscode-autocomplete.png)
 
 It's usually the same component which underlines your code with red squiggles when it contains errors, without having to
-compile.  
-![Underlined errors in VS Code](/assets/vs-code-setup/vscode-red-squiggles.png)
+compile.<br/>![Underlined errors in VS Code](/assets/vs-code-setup/vscode-red-squiggles.png)
 
 You don't _have_ to use code completion, and writing a few simple programs without code completion is a good learning
 experience. But for more complex projects it's invaluable.
@@ -447,7 +443,7 @@ There is one final issue before code completion is properly set up: VS Code does
 bridge the gap between the VS Code editor and the Clangd executable that we just installed, we need to add the Clangd
 extension to VS Code. It will act as a middle man between both, enabling code completion.
 
-Go to the extension marketplace in VS Code, search for `Clangd`, and install what should be the first result:  
+Go to the extension marketplace in VS Code, search for `Clangd`, and install what should be the first result:<br/>
 ![Clangd in the VS Code marketplace](/assets/vs-code-setup/vscode-clangd.png)
 
 That's all you have to do. Now if you go back to your C++ file and type nonsense in it, red squiggles should not take
@@ -646,7 +642,7 @@ debugging purposes, and it's going to be confusing.
 
 And last but not least, we need to tell VS Code how to start our program in a debug session with LLDB DAP. Click on the
 `Run and Debug` button in the left sidebar. In the pane that opens, click on `create a launch.json file`, and select the
-`LLDB DAP Debugger` option in the dropdown:  
+`LLDB DAP Debugger` option in the dropdown:<br/>
 ![The Run and Debug button in VS Code](/assets/vs-code-setup/vscode-run-and-debug.png)
 
 This creates a file named `launch.json` next to the `tasks.json` file in the `.vscode` folder:
@@ -711,7 +707,7 @@ which point the program pauses again).
 What about the last line in the program? Wasn't it supposed to print something? Yes, and it did. However, the output
 generated by programs during debug sessions goes to a dedicated tab called the `Debug Console`. It should be visible by
 default right next your terminal tab, but if not you can bring it up by selecting `View`→`Debug Console` in the top bar.
-Open up the debug console, and hopefully this is what you should see:  
+Open up the debug console, and hopefully this is what you should see:<br/>
 ![The debug console in VS Code](/assets/vs-code-setup/vscode-debug-console.png)
 
 The console output is there, and we also get the confirmation that our program exited normally after resuming (this is

@@ -92,3 +92,4 @@ Also, try to maintain consistent style in code. Some very rough points to touch 
   - `lower_snake` for most things
   - `Capitalized` for template args
   - `SCREAM_CASE` for macros
+- Avoid trailing whitespace on lines. In markdown, prefer `<br/>` over two spaces at the end of a line for a break.
