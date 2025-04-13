@@ -248,13 +248,13 @@ export default defineConfig({
                             items: [
                                 { text: "Standards", link: "/resources/general/standards" },
                                 { text: "Project Ideas", link: "/resources/general/project-ideas" },
+                                { text: "Floating Point Numbers", link: "/resources/general/floating-point" },
                             ],
                             collapsed: true,
                         },
                         {
                             text: "Advanced Resources",
                             items: [
-                                { text: "Floating Point Numbers", link: "/resources/general/floating-point" },
                                 { text: "Performance Analysis", link: "/resources/advanced/performance-analysis" },
                                 { text: "Compiler Development", link: "/resources/advanced/compiler-development" },
                             ],
