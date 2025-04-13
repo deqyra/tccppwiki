@@ -233,6 +233,10 @@ export default defineConfig({
                             link: "/resources/cpp",
                             items: [
                                 {
+                                    text: "C++ Learning Material",
+                                    link: "/resources/cpp/learning",
+                                },
+                                {
                                     text: "C++ Libraries",
                                     link: "/resources/cpp/libraries",
                                 },
