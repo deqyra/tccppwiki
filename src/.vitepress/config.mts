@@ -243,8 +243,14 @@ export default defineConfig({
                             ],
                             collapsed: true,
                         },
-                        { text: "Standards", link: "/resources/general/standards" },
-                        { text: "Project Ideas", link: "/resources/general/project-ideas" },
+                        {
+                            text: "General Resources",
+                            items: [
+                                { text: "Standards", link: "/resources/general/standards" },
+                                { text: "Project Ideas", link: "/resources/general/project-ideas" },
+                            ],
+                            collapsed: true,
+                        },
                         {
                             text: "Advanced Resources",
                             items: [
