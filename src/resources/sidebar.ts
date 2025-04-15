@@ -2,6 +2,7 @@ const sidebar = [
     {
         text: "Resources",
         items: [
+            { text: "Home", link: "/resources/" },
             { text: "Getting Started", link: "/resources/getting-started" },
             {
                 text: "Build Systems",

@@ -12,11 +12,13 @@ import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
 library.add(faFaucet, faChevronLeft, faChevronRight, faGithub, faArrowUpRightFromSquare, faDiscord);
 
 import InlineIcon from "../../core/components/InlineIcon.vue";
+import TableOfContents from "../../core/components/TableOfContents.vue";
 
 export default {
     extends: theme,
     enhanceApp({ app, router, siteData }) {
         app.component("font-awesome-icon", FontAwesomeIcon);
         app.component("InlineIcon", InlineIcon);
+        app.component("TableOfContents", TableOfContents);
     },
 } satisfies Theme;
