@@ -12,7 +12,23 @@ export default defineConfig({
     title: "Together C & C++",
     description: "The Together C & C++ Community",
     outDir: "../dist",
-    head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+    head: [
+        ["link", { rel: "icon", href: "/favicon.ico" }],
+        ["meta", { name: "viewport", content: "width=device-width; initial-scale=1.0;" }],
+        ["meta", { property: "og:type", content: "website" }],
+        ["meta", { property: "og:locale", content: "en" }],
+        ["meta", { property: "og:image", content: "https://tccpp.wiki/assets/tccpp.png" }],
+        ["meta", { property: "og:url", content: "https://tccpp.wiki/" }],
+        ["script", { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-8Q82QMJDK0" }],
+        [
+            "script",
+            {},
+            `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8Q82QMJDK0');`,
+        ],
+    ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         logo: "/assets/tccpp.png",
