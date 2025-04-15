@@ -54,6 +54,17 @@ export default defineConfig({
             md.use(footnote);
             md.use(wiki_icons_plugin);
             md.use(kbd_plugin);
+            // modify page frontmatter
+            const original_render = md.render;
+            md.render = function (src, env) {
+                const result = original_render.call(this, src, env);
+                if (env.relativePath.startsWith("resources/")) {
+                    env.frontmatter ??= {};
+                    env.frontmatter.prev = false;
+                    env.frontmatter.next = false;
+                }
+                return result;
+            };
         },
     },
     cleanUrls: true,
