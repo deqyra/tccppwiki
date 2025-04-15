@@ -25,7 +25,7 @@ const showFooter = computed(
         <div v-if="hasEditLink || hasLastUpdated" class="edit-info">
             <div v-if="hasEditLink" class="edit-link">
                 <VPLink class="edit-link-button" :href="editLink.url" :no-icon="true">
-                    <span class="vpi-square-pen edit-link-icon" />
+                    <font-awesome-icon :icon="['fab', 'github']" />
                     {{ editLink.text }}
                 </VPLink>
             </div>
@@ -73,18 +73,16 @@ const showFooter = computed(
 }
 
 .edit-link-button {
-    display: flex;
-    align-items: center;
     border: 0;
     line-height: 32px;
     font-size: 14px;
     font-weight: 500;
-    color: var(--vp-c-brand-1);
+    color: var(--vp-c-text-3);
     transition: color 0.25s;
 }
 
 .edit-link-button:hover {
-    color: var(--vp-c-brand-2);
+    color: var(--vp-c-text-2);
 }
 
 .edit-link-icon {

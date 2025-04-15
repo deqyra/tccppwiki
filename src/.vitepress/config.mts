@@ -47,6 +47,12 @@ export default defineConfig({
             { icon: "discord", link: "https://discord.gg/tccpp" },
             { icon: "github", link: "https://github.com/TCCPP/wiki" },
         ],
+        editLink: {
+            pattern: ({ filePath }) => {
+                return `https://github.com/TCCPP/wiki/tree/main/src/${filePath}`;
+            },
+            text: "Contribute to this page on GitHub",
+        },
     },
     markdown: {
         math: true,
