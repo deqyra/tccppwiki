@@ -5,7 +5,6 @@ const sidebar = [
             { text: "Getting Started", link: "/resources/getting-started" },
             {
                 text: "Build Systems",
-                link: "/resources/build-systems",
                 items: [
                     {
                         text: "CMake",
@@ -31,7 +30,6 @@ const sidebar = [
             },
             {
                 text: "C++ Resources",
-                link: "/resources/cpp",
                 items: [
                     {
                         text: "C++ Learning Material",
