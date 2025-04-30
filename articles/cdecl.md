@@ -1,14 +1,13 @@
 # How Do I Read C Declaration/Type Syntax?
 
-Start at the identifier, and apply postfix operators first, then prefix. Append whatever is left in the end.
-
-- `()` means _function returning_
-- `[]` means _array of_
-- `*` means _pointer to_; `* const` means _const pointer to_
+Start at the identifier, and apply postfix operators first, then prefix.
+Append whatever is left in the end.
+- `()` means *function returning*
+- `[]` means *array of*
+- `*` means *pointer to*; `* const` means *const pointer to*
 - parentheses can be used to apply `*` before `()` or `[]`
 
 ## Example 1 - Array of Pointers, or Pointer to Array?
-
 ```cpp
 int (*ptr)[10]; // declare
       ptr       // ptr as
@@ -19,7 +18,6 @@ int __________  // int
 ```
 
 ## Example 2 - Nested Pointers with `const`
-
 ```cpp
 int const * const * p; // declare
                     p  // p as
@@ -30,7 +28,6 @@ int const _ _____ _ _  // const int
 ```
 
 ## Example 3 - Abstract Declarators: When There Is No Identifier
-
 ```cpp
 char *(*)(int)
       (*)       // pointer to
@@ -42,4 +39,5 @@ char _________  // char
 
 ## See Also
 
-**[Use cdecl+](<https://cdecl.plus/?q=int%20(*ptr)%5B10%5D;>)** to automatically translate declarations to prose.
+**[Use cdecl+](https://cdecl.plus/?q=int%20(*ptr)%5B10%5D;)** to automatically
+translate declarations to prose.

@@ -1,12 +1,11 @@
 # Overloading the Equality Comparison Operator
 
-The equality comparison operator returns `true` if one object is equal to another. Defining this operator makes a type
-_[EqualityComparable][1]_.
+The equality comparison operator returns `true` if one object is equal to another.
+Defining this operator makes a type *[EqualityComparable][1]*.
 
 [1]: https://en.cppreference.com/w/cpp/named_req/EqualityComparable
 
 ## Example
-
 ```cpp
 struct point {
     int x, y;
@@ -21,7 +20,6 @@ struct point {
 ```
 
 ## Since C++20
-
 ```cpp
 struct point {
     int x, y;

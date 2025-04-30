@@ -1,8 +1,7 @@
 # What Is an Atomic Compare-And-Swap (CAS)?
 
-[CAS][cas] allows _[read-modify-write operations][rmw]_ for atomics. It's often the foundation of _[lock-free
-algorithms][lf]_. In C++, this takes the form of **[std::atomic::compare_exchange_xxx][xchg]**:
-
+[CAS][cas] allows *[read-modify-write operations][rmw]* for atomics. It's often the foundation of
+*[lock-free algorithms][lf]*. In C++, this takes the form of **[std::atomic::compare_exchange_xxx][xchg]**:
 ```cpp
 bool atomic<T>::compare_exchange(T& expected, T desired) {
     T old = load(); // All of this happens atomically.
@@ -18,7 +17,6 @@ bool atomic<T>::compare_exchange(T& expected, T desired) {
 [xchg]: https://en.cppreference.com/w/cpp/atomic/atomic/compare_exchange
 
 ## Example - Lock-Free Singly Linked List Stack Push
-
 ```cpp
 struct node { int val; std::atomic<node*> next; };
 std::atomic<node*> top;
@@ -31,6 +29,7 @@ void push(int val) {
     } while(!top.compare_exchange_weak(old_top, element));
 }
 ```
-
-Each iteration, `old_top` is loaded from `top`. In the time that we set `element->next = old_top` another thread might
-have updated `top`, which makes the exchange fail. We keep retrying until we _safely_ exchange `top` with the `element`.
+Each iteration, `old_top` is loaded from `top`.
+In the time that we set `element->next = old_top` another thread might have updated `top`,
+which makes the exchange fail.
+We keep retrying until we *safely* exchange `top` with the `element`.

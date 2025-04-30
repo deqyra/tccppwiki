@@ -1,10 +1,10 @@
 # Overloading the Assignment Operator
 
-The assignment operator should assign one object to the value of another. The assigned object should be returned by
-reference. It must be defined as a member function.
+The assignment operator should assign one object to the value of another.
+The assigned object should be returned by reference.
+It must be defined as a member function.
 
 ## Example
-
 ```cpp
 struct point {
     int x, y;
@@ -18,7 +18,6 @@ struct point {
     point& operator=(point&&) = default;
 };
 ```
-
 Note: the copy assignment operator can accept `other` by value too.
 
 ## See Also

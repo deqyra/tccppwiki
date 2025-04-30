@@ -1,10 +1,9 @@
 # What is an Aggregate Type in C++?
 
-An aggregate type is a class with no constructors (since C++20, not even explicitly defaulted ones). Aggregates can be
-initialized with aggregate initialization using `{}`.
+An aggregate type is a class with no constructors (since C++20, not even explicitly defaulted ones).
+Aggregates can be initialized with aggregate initialization using `{}`.
 
 ## Example
-
 ```cpp
 struct rational {
     int numer = 0;
@@ -18,9 +17,7 @@ rational third{.numer = 1, denom = 3}; // C++20
 ```
 
 ## Rules for Aggregate Initialization
-
 In the initializer lists (such as `{1, 2}`):
-
 - we can provide the value for each member explicitly
 - or if none is provided, the default member initializer (e.g. `= 1`) is used
 - or if none exists, the member is value-initialized (`0` for `int`)

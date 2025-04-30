@@ -1,10 +1,9 @@
 # Overloading Arithmetic Operators
 
-Arithmetic operators like `+` perform an arithmetic operation without modifying their operands, and return the result by
-value.
+Arithmetic operators like `+` perform an arithmetic operation without modifying their operands,
+and return the result by value.
 
 ## Example
-
 ```cpp
 struct point {
     int x, y;
@@ -22,5 +21,4 @@ point operator*(point a, point b) {
     return a *= b;
 }
 ```
-
 Note: for large types, pass as `const&` and not by value

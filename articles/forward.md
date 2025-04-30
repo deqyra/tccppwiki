@@ -1,8 +1,7 @@
 # Perfect Forwarding and Forwarding References
 
-References of the form `T&&` are _[forwarding references][fr]_ if `T` is a template parameter of the current function
+References of the form `T&&` are *[forwarding references][fr]* if `T` is a template parameter of the current function
 template. These references have special deduction rules:
-
 ```cpp
 template <class T>
 void f(T&& r); // r is a forwarding reference
@@ -19,10 +18,8 @@ auto&& a = x; // decltype(a) = int&
 [fr]: https://en.cppreference.com/w/cpp/language/reference#Forwarding_references
 
 ## Perfectly Forwarding Function Arguments With `std::forward`
-
-No matter what `T` deduces to, the expression `r` is an _[lvalue][lvalue]_ when used inside the function `f`.
+No matter what `T` deduces to, the expression `r` is an *[lvalue][lvalue]* when used inside the function `f`.
 **[std::forward][forward]** recovers the reference type:
-
 ```cpp
 std::forward<T>(r) // yields int&& if T = int
 std::forward<T>(r) // yields int&  if T = int&
@@ -32,9 +29,9 @@ std::forward<T>(r) // yields int&  if T = int&
 [forward]: https://en.cppreference.com/w/cpp/utility/forward
 
 ## See Also
-
-<:stackoverflow:1074747016644661258> _[Purpose of std::forward](https://stackoverflow.com/q/3582001/5740428)_<br>
-<:stackoverflow:1074747016644661258> [What does auto&& tell us?](https://stackoverflow.com/q/13230480/5740428)<br>
-
+<:stackoverflow:1074747016644661258>
+*[Purpose of std::forward](https://stackoverflow.com/q/3582001/5740428)*<br>
+<:stackoverflow:1074747016644661258>
+[What does auto&& tell us?](https://stackoverflow.com/q/13230480/5740428)<br>
 - [cppreference: Reference collapsing](https://en.cppreference.com/w/cpp/language/reference#Reference_collapsing)
 - `!wiki value-categories`

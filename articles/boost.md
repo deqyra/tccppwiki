@@ -3,4 +3,4 @@
 
 # Boost
 
-Did you mean: [**_bool_**](https://discord.com/channels/331718482485837825/851121440425639956/1231250697148698645)
+Did you mean: [***bool***](https://discord.com/channels/331718482485837825/851121440425639956/1231250697148698645)

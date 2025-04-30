@@ -1,16 +1,15 @@
 # What Is the As-If Rule, and How Does the Compiler Optimize Code?
 
-The compiler can transform code however it thinks is best, as long as this doesn't change the _observable behavior_ of
-the program. People call this the _[as-if rule][as-if]_. Observable behavior includes, but is not limited to:
-
+The compiler can transform code however it thinks is best, as long as this
+doesn't change the *observable behavior* of the program.
+People call this the *[as-if rule][as-if]*.
+Observable behavior includes, but is not limited to:
 - writing output to the terminal (**[printf][printf]**, **[std::cout][cout]**, etc.)
 - aborting the program (**[exit][exit]**, **[std::terminate][term]**, etc.)
 - access of **[volatile][volatile]** objects
 
 <!-- inline -->
-
 ## Example
-
 ```cpp
 int main() {
   if (false)
@@ -19,13 +18,10 @@ int main() {
   return x + 7;
 }
 ```
-
-The _observable behavior_ is that the program returns the exit code `10`.
+The *observable behavior* is that the program returns the exit code `10`.
 
 <!-- inline -->
-
 ## Assembly Output
-
 ```x86asm
 main:
 ; 'if (false)' removed by
@@ -34,8 +30,7 @@ main:
   mov eax, 10
   ret
 ```
-
-_See [live example at Compiler Explorer][ce]_
+*See [live example at Compiler Explorer][ce]*
 
 [as-if]: https://en.cppreference.com/w/cpp/language/as_if
 [volatile]: https://en.cppreference.com/w/cpp/language/cv

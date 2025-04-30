@@ -7,9 +7,7 @@
 - choose a consistent style
 
 <!-- inline -->
-
 ## Bad Example
-
 ```c
 int a;
 int rct =
@@ -20,9 +18,7 @@ printf("age: %d", a);
 ```
 
 <!-- inline -->
-
 ## Good Example
-
 ```c
 int age;
 int readCount =
@@ -33,14 +29,11 @@ printf("age: %d", age);
 ```
 
 ## Naming Conventions
+Above all else, use conventions consistently.
+For example, `PascalCase` for classes, `camelCase` for variables/functions, `CAPS_CASE` for macros.
+The C++ standard library uses `snake_case` for almost everything, but many developers do not follow this style.
 
-Above all else, use conventions consistently. For example, `PascalCase` for classes, `camelCase` for
-variables/functions, `CAPS_CASE` for macros. The C++ standard library uses `snake_case` for almost everything, but many
-developers do not follow this style.
-
-The C standard library is a good example for breaking rule 4. It uses abbreviations extensively, which might harm
-readability (compare `strstr` `strtok` `strcspn`).
+The C standard library is a good example for breaking rule 4. It uses abbreviations extensively, which might harm readability (compare `strstr` `strtok` `strcspn`).
 
 ## See Also
-
 - [Short article on naming conventions](https://www.theserverside.com/feature/A-guide-to-common-variable-naming-conventions)
