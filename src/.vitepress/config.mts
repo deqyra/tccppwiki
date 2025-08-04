@@ -3,15 +3,16 @@ import footnote from "markdown-it-footnote";
 import { wiki_icons_plugin } from "../core/markdown/wiki-icons";
 import { kbd_plugin } from "../core/markdown/kbd";
 
-import c_tutorial_sidebar from "../c-tutorial/sidebar";
-import cpp_tutorial_sidebar from "../cpp-tutorial/sidebar";
-import resources_sidebar from "../resources/sidebar";
+import c_tutorial_sidebar from "../../wiki/c-tutorial/sidebar";
+import cpp_tutorial_sidebar from "../../wiki/cpp-tutorial/sidebar";
+import resources_sidebar from "../../wiki/resources/sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "Together C & C++",
     description: "The Together C & C++ Community",
     outDir: "../dist",
+    srcDir: "../wiki",
     head: [
         ["link", { rel: "icon", href: "/favicon.ico" }],
         ["meta", { name: "viewport", content: "width=device-width; initial-scale=1.0;" }],
