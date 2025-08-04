@@ -1,4 +1,5 @@
 <!-- alias asan -->
+<!-- wikilink http://tccpp.wiki/resources/general/asan -->
 
 # Address Sanitizer
 
